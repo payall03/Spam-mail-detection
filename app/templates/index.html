@@ -1,25 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Spam Mail Detection</title>
-    <style>
-        body { font-family: Arial; padding: 20px; background: #f9f9f9; }
-        .container { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 10px; }
-        textarea { width: 100%; height: 120px; padding: 10px; font-size: 16px; }
-        button { padding: 10px 20px; font-size: 16px; }
-        .result { margin-top: 20px; font-size: 18px; font-weight: bold; }
-    </style>
+  <meta charset="UTF-8">
+  <title>Spam Mail Detector | Payal Verma</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 60px auto;
+      background: #ffffff;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 120px;
+      padding: 12px 15px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      resize: none;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background: #3498db;
+      color: white;
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #2980b9;
+    }
+
+    .result {
+      margin-top: 25px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    img.robot {
+      max-width: 180px;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>📩 Spam Mail Detection</h1>
-        <form method="POST">
-            <textarea name="message" placeholder="Paste your message here...">{{ message }}</textarea><br><br>
-            <button type="submit">Predict</button>
-        </form>
-        {% if prediction %}
-            <div class="result">{{ prediction }}</div>
-        {% endif %}
-    </div>
+  <div class="container">
+    <h1>📩 Spam Message Checker</h1>
+
+    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Robot Checker" class="robot" />
+
+    <form method="POST">
+      <textarea name="message" placeholder="Type message..."></textarea><br>
+      <button type="submit">Check Message</button>
+    </form>
+
+    <div class="result">{{ prediction }}</div>
+  </div>
+
+  <footer>© 2025 Developed by Payal Verma</footer>
 </body>
 </html>
